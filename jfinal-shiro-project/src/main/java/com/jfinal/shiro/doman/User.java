@@ -8,5 +8,33 @@ import com.jfinal.plugin.activerecord.Model;
  */
 public class User extends Model<User> {
 
-    private static final User user = new User();
+    public static final User user = new User();
+
+    public void setId(Integer id) {
+        set("id", id);
+    }
+
+    public Integer getId() {
+        return get("id");
+    }
+
+    public void setUsername(String username) {
+        set("username", username);
+    }
+
+    public String getUsername() {
+        return get("username");
+    }
+
+    public void setPassword(String password) {
+        set("password", password);
+    }
+
+    public String getPassword() {
+        return get("password");
+    }
+
+    public User findByUsername(String username) {
+        return User.user.findFirst("select * from users where username=?", username);
+    }
 }

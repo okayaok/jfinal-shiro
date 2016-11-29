@@ -6,13 +6,9 @@ import com.jfinal.core.Controller;
  * @author hang_xiao
  * @date 2016/11/29
  */
-public class LoginController extends Controller {
+public class HomeController extends Controller {
 
     public void index() {
-        render("login.ftl");
-    }
-
-    public void login() {
-        redirect("home");
+        render("index.ftl");
     }
 }

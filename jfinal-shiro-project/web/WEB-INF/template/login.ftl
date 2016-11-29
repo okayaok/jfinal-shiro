@@ -34,15 +34,15 @@
     <div class="avtar">
         <img src="/resources/images/avtar.png" />
     </div>
-    <form>
-        <input type="text" class="text" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" >
+    <form action="/login" method="post">
+        <input type="text" class="text" name="user.username" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" >
         <div class="key">
-            <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+            <input type="password" value="Password" name="user.password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+        </div>
+        <div class="signin">
+            <input type="submit" value="登陆" >
         </div>
     </form>
-    <div class="signin">
-        <input type="submit" value="登陆" >
-    </div>
 </div>
 <div class="copy-rights">
     <p>Copyright &copy; 2015.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>

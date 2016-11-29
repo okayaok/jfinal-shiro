@@ -5,7 +5,10 @@ import com.jfinal.kit.PropKit;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.c3p0.C3p0Plugin;
 import com.jfinal.render.ViewType;
+import com.jfinal.shiro.controller.HomeController;
 import com.jfinal.shiro.controller.LoginController;
+import com.jfinal.shiro.doman.Role;
+import com.jfinal.shiro.doman.User;
 
 /**
  * @author hang_xiao
@@ -39,6 +42,7 @@ public class ApplicationConfig extends JFinalConfig {
     public void configRoute(Routes route) {
         this.routes = route;
         route.add("/", LoginController.class);
+        route.add("/home", HomeController.class);
     }
 
     @Override
@@ -49,6 +53,9 @@ public class ApplicationConfig extends JFinalConfig {
 
         ActiveRecordPlugin arp = new ActiveRecordPlugin(c3p0Plugin);
         plugins.add(arp);
+
+        arp.addMapping("users", User.class);
+        arp.addMapping("roles", Role.class);
     }
 
     @Override
