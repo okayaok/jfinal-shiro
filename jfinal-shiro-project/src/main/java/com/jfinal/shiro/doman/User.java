@@ -7,4 +7,6 @@ import com.jfinal.plugin.activerecord.Model;
  * @date 2016/11/29
  */
 public class User extends Model<User> {
+
+    private static final User user = new User();
 }

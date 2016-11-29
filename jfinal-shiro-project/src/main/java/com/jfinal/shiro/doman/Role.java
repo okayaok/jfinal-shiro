@@ -7,4 +7,6 @@ import com.jfinal.plugin.activerecord.Model;
  * @date 2016/11/29
  */
 public class Role extends Model<Role> {
+
+    private static final Role role = new Role();
 }

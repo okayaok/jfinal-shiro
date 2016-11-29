@@ -7,4 +7,8 @@ import com.jfinal.core.Controller;
  * @date 2016/11/29
  */
 public class LoginController extends Controller {
+
+    public void index() {
+        render("login.ftl");
+    }
 }
