@@ -30,7 +30,7 @@ public class ApplicationConfig extends JFinalConfig {
     public void configConstant(Constants constants) {
 
         //通过PropKit.use加载的配置将成为主配置，可以通过PropKit.get(...)直接取值
-        PropKit.use("mysql-connection-properties");
+        PropKit.use("mysql-connection.properties");
         //设置为发开模式
         constants.setDevMode(true);
         constants.setViewType(ViewType.FREE_MARKER);
